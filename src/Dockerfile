@@ -2,6 +2,7 @@ FROM node:latest
 WORKDIR /app
 COPY package*.json ./
 RUN npm install -y
-COPY . .
 EXPOSE 8080
+COPY . .
 CMD ["node", "server.js"]
+
